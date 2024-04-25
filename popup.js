@@ -5,8 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleRedactButton = document.getElementById("toggleRedact");
   const textInputs = document.getElementById("textInputs");
   const colorPicker = document.getElementById("colorPicker");
+  const redactionStatus = document.getElementById("redactionStatus");
 
   let redactionActive = false;
+
+  function updateRedactionStatus() {
+    redactionStatus.textContent = `Redaction is ${redactionActive ? "ON" : "OFF"}`;
+    redactionStatus.style.color = redactionActive ? "green" : "red";
+  }
 
   function addInput(value = "") {
     const li = document.createElement("li");
@@ -32,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   toggleRedactButton.onclick = function () {
     redactionActive = !redactionActive;
+    updateRedactionStatus();
     console.log("Set redaction active to:", redactionActive);
 
     const texts = Array.from(
@@ -62,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function saveSettings(texts, color, active) {
     chrome.storage.local.set({ texts: texts, color: color, active: active });
+    updateRedactionStatus();
   }
 
   function loadSettings() {
@@ -81,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (result.active !== undefined) {
         redactionActive = result.active;
+        updateRedactionStatus();
       }
     });
   }
