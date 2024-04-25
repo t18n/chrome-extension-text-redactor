@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Text Redactor</title>
+    <script src="popup.js"></script>
+  </head>
+  <style>
+    main {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 300px;
+    }
+    button {
+      min-width: 40px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+      gap: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+    }
+
+    li input {
+      flex: 1;
+    }
+
+    .label {
+      font-size: 1.2em;
+    }
+
+    .inputGroup {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    #colorPicker {
+      width: % 100px;
+      height: 20px;
+    }
+  </style>
+  <body>
+    <main>
+      <h1>Text Redactor</h1>
+      <div class="inputGroup">
+        <h4>Manage text to redact</h4>
+        <ul id="textInputs">
+          <li>
+            <input type="text" placeholder="Enter text to redact" />
+            <button>Remove</button>
+          </li>
+        </ul>
+        <button id="addInput">Add more text</button>
+      </div>
+      <div class="inputGroup">
+        <h4>Choose overlay color</h4>
+        <input type="color" id="colorPicker" />
+      </div>
+      <button id="toggleRedact">Toggle Redact</button>
+    </main>
+  </body>
+</html>
