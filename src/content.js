@@ -4,8 +4,6 @@ let redacted = false;
 let previousTexts = [];
 let originalNodes = [];
 
-console.log("Content script loaded.");
-
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   sendResponse({
     message: `Received message from popup.js with ${JSON.stringify(request)}`,
@@ -27,7 +25,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 });
 
 function redactText(searchTexts, hexColor) {
-  console.log("Starting redaction process...");
   restoreText(); // Ensure any previous redactions are cleared
   originalNodes = [];
 
@@ -78,12 +75,9 @@ function redactText(searchTexts, hexColor) {
       }
     }
   });
-
-  console.log("Redaction complete with color:", hexColor);
 }
 
 function restoreText() {
-  console.log("Restoring original text nodes...");
   originalNodes.forEach(({ original, new: newNode }) => {
     const parent = newNode.parentNode;
     if (parent) {

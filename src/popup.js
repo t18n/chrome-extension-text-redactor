@@ -39,18 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleRedactButton.onclick = function () {
     redactionActive = !redactionActive;
     updateRedactionStatus();
-    console.log("Set redaction active to:", redactionActive);
 
     const texts = Array.from(
       textInputs.querySelectorAll('input[type="text"]'),
     ).map((input) => input.value);
-    console.log("Texts to redact:", texts);
 
     const color = colorPicker.value;
-    console.log("Color to redact with:", color);
 
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      console.log("Targeted tab for redaction:", tabs[0].url);
       chrome.tabs
         .sendMessage(tabs[0].id, {
           action: "toggleRedact",
@@ -64,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(onError);
     });
     saveSettings(texts, color, redactionActive);
-    console.log("Saved settings to local storage.");
   };
 
   function saveSettings(texts, color, active) {

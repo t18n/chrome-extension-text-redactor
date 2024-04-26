@@ -29,9 +29,9 @@ To use Text Redactor, click the extension icon in the Chrome toolbar to open the
 
 ## Screenshots
 
-![Redact text](./screenshots/redact-text.jpeg)
-![Redact shadow root](./screenshots/redact-shadow-root.jpeg)
-![Color picker option](./screenshots/color-picker.jpeg)
+![Redact text](./assets/screenshots/redact-text.jpeg)
+![Redact shadow root](./assets/screenshots/redact-shadow-root.jpeg)
+![Color picker option](./assets/screenshots/color-picker.jpeg)
 
 ## Contributing
 
