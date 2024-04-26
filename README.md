@@ -2,6 +2,10 @@
 
 Text Redactor is a Chrome extension designed to enhance privacy and focus by allowing users to selectively hide text on web pages. This tool is perfect for users who need to conceal sensitive information or reduce visual clutter while browsing, or wanting to hide some text before taking a screenshot.
 
+![Redact text](./assets/screenshots/redact-text.jpeg)
+
+For more screenshots, see [screenshots folder](./assets/screenshots)
+
 ## Features
 
 - **Text Hiding**: Redact text directly on web pages using customizable redaction settings. The redactor also works with **shadow-root** HTML elements, which is useful for redacting development error message.
@@ -26,12 +30,6 @@ To use Text Redactor, click the extension icon in the Chrome toolbar to open the
 2. **Set Color**: Use the color picker to choose the overlay color for the redaction.
 3. **Activate**: Click "Toggle Redact" to activate or deactivate text redaction on the current page.
 4. **Remove Text**: Next to each text input, there is a "Remove" button to delete unnecessary text entries.
-
-## Screenshots
-
-![Redact text](./assets/screenshots/redact-text.jpeg)
-![Redact shadow root](./assets/screenshots/redact-shadow-root.jpeg)
-![Color picker option](./assets/screenshots/color-picker.jpeg)
 
 ## Contributing
 
