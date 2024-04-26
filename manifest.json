@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Text Redactor",
   "version": "1.0",
-  "description": "Redact specified text strings on web pages with customizable colors.",
+  "description": "Text Redactor is a Chrome extension that hides text on web pages to boost privacy and focus, or for screenshot prep.",
   "permissions": [
     "activeTab",
     "storage"
