@@ -1,5 +1,11 @@
 # Text Redactor
 
+<p align="center">
+  <a rel="noreferrer noopener" href="https://chromewebstore.google.com/detail/text-redactor/jicgibfoonmonhnddjohaeehahafdncf">
+    <img alt="Chrome Web Store" src="https://img.shields.io/badge/Chrome-141e24.svg?&style=for-the-badge&logo=google-chrome&logoColor=white">
+  </a>
+</p>
+
 Text Redactor is a Chrome extension designed to enhance privacy and focus by allowing users to selectively hide text on web pages. This tool is perfect for users who need to conceal sensitive information or reduce visual clutter while browsing, or wanting to hide some text before taking a screenshot.
 
 ![Redact text](./assets/screenshots/redact-text.jpeg)
